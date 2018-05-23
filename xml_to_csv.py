@@ -25,11 +25,8 @@ def xml_to_csv(path):
     return xml_df
 
 
-def main():
+if __name__ == '__main__':
     image_path = os.path.join(os.getcwd(), 'annotations')
     xml_df = xml_to_csv(image_path)
     xml_df.to_csv('raccoon_labels.csv', index=None)
     print('Successfully converted xml to csv.')
-
-
-main()
